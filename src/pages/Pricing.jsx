@@ -15,9 +15,7 @@ export default function Product() {
             Just $9/month.
           </h2>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae vel
-            labore mollitia iusto. Recusandae quos provident, laboriosam fugit
-            voluptatem iste.
+          Pain itself, sit amet consectetur adipisicing elit. Life and work are just. Reject those who provide, the laborious fugitives of the truth.
           </p>
         </div>
         <img src="img-2.jpg" alt="overview of a large city with skyscrapers" />

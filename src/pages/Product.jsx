@@ -14,15 +14,10 @@ export default function Product() {
         <div>
           <h2>About WorldWide.</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo est
-            dicta illum vero culpa cum quaerat architecto sapiente eius non
-            soluta, molestiae nihil laborum, placeat debitis, laboriosam at fuga
-            perspiciatis?
-          </p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis
-            doloribus libero sunt expedita ratione iusto, magni, id sapiente
-            sequi officiis et.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. It is said that the light is true, the fault is with the architect, the wise man is not free, the pain is nothing, the place is owed, the labor is at the escape of the sweat?
+           </p>
+           <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. The body is free from pain, it is expedient to reason rightly, great, the wise man follows the officials and.
           </p>
         </div>
       </section>
