@@ -1,64 +1,88 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
-      "cityName": "Madrid",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
-      "notes": "",
-      "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
-      },
-      "id": 17806751
-    },
-    {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": 98443197
-    },
-    {
-      "cityName": "Nijar",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2023-04-03T07:47:59.202Z",
-      "notes": "",
-      "position": {
-        "lat": "36.967508314568164",
-        "lng": "-2.13128394200588"
-      },
-      "id": 98443198
-    },
-    {
-      "cityName": "Bhopal",
+      "cityName": "Hyderabad",
       "country": "India",
       "emoji": "🇮🇳",
-      "date": "2025-04-02T20:02:49.613Z",
-      "notes": "Not Bad",
+      "date": "2025-04-24T04:29:10.018Z",
+      "notes": "",
       "position": {
-        "lat": "23.242334583484343",
-        "lng": "77.44262695312501"
+        "lat": "17.493127791259557",
+        "lng": "78.6858334480747"
       },
-      "id": 98443199
+      "id": 1
+    },
+    {
+      "cityName": "Bagepalli",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2025-04-24T04:29:15.217Z",
+      "notes": "",
+      "position": {
+        "lat": "13.680797166524707",
+        "lng": "78.00760013236578"
+      },
+      "id": 2
+    },
+    {
+      "cityName": "Rudravaram",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2025-04-24T04:29:19.100Z",
+      "notes": "",
+      "position": {
+        "lat": "15.339358700416021",
+        "lng": "78.64236579470867"
+      },
+      "id": 3
+    },
+    {
+      "cityName": "Talupula",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2025-04-24T04:32:14.928Z",
+      "notes": "",
+      "position": {
+        "lat": "14.22456533261395",
+        "lng": "78.34499191001412"
+      },
+      "id": 4
+    },
+    {
+      "cityName": "Muong Cha",
+      "country": "Viet Nam",
+      "emoji": "🇻🇳",
+      "date": "2025-04-24T04:33:47.085Z",
+      "notes": "",
+      "position": {
+        "lat": "21.95598746451107",
+        "lng": "103.18359375000001"
+      },
+      "id": 5
+    },
+    {
+      "cityName": "Kundgol",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2025-04-24T04:43:47.438Z",
+      "notes": "",
+      "position": {
+        "lat": "15.30864588584552",
+        "lng": "75.21240234375001"
+      },
+      "id": 6
+    },
+    {
+      "cityName": "Chandragiri",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2025-04-29T14:04:57.820Z",
+      "notes": "",
+      "position": {
+        "lat": "13.523771208725414",
+        "lng": "79.2279052734375"
+      },
+      "id": 7
     }
   ]
 }
