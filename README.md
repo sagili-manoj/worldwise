@@ -52,8 +52,3 @@ Before running the project, ensure you have the following installed:
 - [Leaflet](https://leafletjs.com/) - For interactive maps
 - [Vite](https://vitejs.dev/) or [Create React App](https://create-react-app.dev/) - Build tool (assumed based on standard React setup)
 
-## Build
-To create a production build:
-```bash
-npm run build
-```
