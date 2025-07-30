@@ -6,8 +6,6 @@ import {
   useCallback,
 } from "react";
 
-const BASE_URL = "http://localhost:9000";
-
 const CitiesContext = createContext();
 
 const initialState = {
@@ -66,79 +64,60 @@ function CitiesProvider({ children }) {
     initialState
   );
 
-  useEffect(function () {
-    async function fetchCities() {
-      dispatch({ type: "loading" });
-
-      try {
-        const res = await fetch(`${BASE_URL}/cities`);
-        const data = await res.json();
-        dispatch({ type: "cities/loaded", payload: data });
-      } catch {
-        dispatch({
-          type: "rejected",
-          payload: "There was an error loading cities...",
-        });
-      }
-    }
-    fetchCities();
-  }, []);
-
-  const getCity = useCallback(
-    async function getCity(id) {
-      if (Number(id) === currentCity.id) return;
-
-      dispatch({ type: "loading" });
-
-      try {
-        const res = await fetch(`${BASE_URL}/cities/${id}`);
-        const data = await res.json();
-        dispatch({ type: "city/loaded", payload: data });
-      } catch {
-        dispatch({
-          type: "rejected",
-          payload: "There was an error loading the city...",
-        });
-      }
-    },
-    [currentCity.id]
-  );
-
-  async function createCity(newCity) {
+  // Load from localStorage on mount
+  useEffect(() => {
     dispatch({ type: "loading" });
-
     try {
-      const res = await fetch(`${BASE_URL}/cities`, {
-        method: "POST",
-        body: JSON.stringify(newCity),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      const data = await res.json();
-
-      dispatch({ type: "city/created", payload: data });
+      const data = JSON.parse(localStorage.getItem("cities")) || [];
+      dispatch({ type: "cities/loaded", payload: data });
     } catch {
       dispatch({
         type: "rejected",
-        payload: "There was an error creating the city...",
+        payload: "Failed to load cities from localStorage",
+      });
+    }
+  }, []);
+
+  const getCity = useCallback(
+    function getCity(id) {
+      dispatch({ type: "loading" });
+      const foundCity = cities.find((city) => city.id === Number(id));
+      if (foundCity)
+        dispatch({ type: "city/loaded", payload: foundCity });
+      else
+        dispatch({
+          type: "rejected",
+          payload: "City not found",
+        });
+    },
+    [cities]
+  );
+
+  function createCity(newCity) {
+    dispatch({ type: "loading" });
+    try {
+      const cityWithId = { ...newCity, id: Date.now() };
+      const updatedCities = [...cities, cityWithId];
+      localStorage.setItem("cities", JSON.stringify(updatedCities));
+      dispatch({ type: "city/created", payload: cityWithId });
+    } catch {
+      dispatch({
+        type: "rejected",
+        payload: "Error saving new city to localStorage",
       });
     }
   }
 
-  async function deleteCity(id) {
+  function deleteCity(id) {
     dispatch({ type: "loading" });
-
     try {
-      await fetch(`${BASE_URL}/cities/${id}`, {
-        method: "DELETE",
-      });
-
+      const updatedCities = cities.filter((city) => city.id !== id);
+      localStorage.setItem("cities", JSON.stringify(updatedCities));
       dispatch({ type: "city/deleted", payload: id });
     } catch {
       dispatch({
         type: "rejected",
-        payload: "There was an error deleting the city...",
+        payload: "Error deleting city from localStorage",
       });
     }
   }
