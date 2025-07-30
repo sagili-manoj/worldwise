@@ -22,7 +22,7 @@ Before running the project, ensure you have the following installed:
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/sagili-manoj/worldwise.git
+   git clone https://github.com/sagili-manoj/worldwise
    ```
 2. Navigate to the project directory:
    ```bash
@@ -34,12 +34,11 @@ Before running the project, ensure you have the following installed:
    ```
 
 ## Usage
-1. Start the development server:
+1. Start the development:
    ```bash
-   npm run server
    npm run dev
    ```
-2. Open your browser and navigate to `http://localhost:3000` to view the app.
+2. Open your browser and navigate to `http://localhost:3000` or any other port that is running to view the app.
 3. Explore the app:
    - Visit the homepage, product, or pricing pages.
    - Log in using the demo credentials (if applicable) to access the protected app section.
